@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector, useStore } from 'react-redux';
 import { useForm } from 'react-hook-form';
-import { Button } from '@mui/material';
+import { Button, Box } from '@mui/material';
 import { chooseMake, chooseModel, chooseSeries, chooseDescription, choosePrice, chooseCondition, chooseMaxSpeed, chooseHorsepower } from '../../redux/slices/rootSlice';
 import { Input } from '../shareComponents/Input/';
 import { serverCalls } from '../../api';
@@ -53,10 +53,10 @@ export const CarForm = (props:CarFormProps) => {
     }
 
     return (
-        <div>
+        <Box>
             <form onSubmit = {handleSubmit(onSubmit)}>
                 <div>
-                    <label htmlFor='make'>Brand</label>
+                    <label htmlFor=''></label>
                     <Input {...register('make')} name = 'make' placeholder = 'Audi' label = 'Vehicle Make' />
                 </div>
                 <div>
@@ -87,8 +87,9 @@ export const CarForm = (props:CarFormProps) => {
                     <label htmlFor=''></label>
                     <Input {...register('horsepower')} name = 'horsepower' placeholder = '20hp' label = 'Horsepower' />
                 </div>
+                <Button type='submit'>Submit</Button>
             </form>
-        </div>
+        </Box>
     )
 
 }

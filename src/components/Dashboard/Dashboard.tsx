@@ -138,7 +138,7 @@ export const Dashboard = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant='h6' noWrap>Dashboard</Typography>
-          <Button sx={myStyles.toolbar_button} onClick={handleDialogOpen}>Create New Drone</Button>
+          <Button sx={myStyles.toolbar_button} onClick={handleDialogOpen}>Create New Vehicle</Button>
           {/* Dialog Pop Up Begin */}
           <Dialog open={dialogOpen} onClose={handleDialogClose} aria-labelledby='form-dialog-title'>
             <DialogTitle id="form-dialog-title">Add New Drone</DialogTitle>

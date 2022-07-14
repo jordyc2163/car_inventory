@@ -18,7 +18,7 @@ const columns: GridColDef[] = [
     {
         field: 'make',
         headerName: 'Make',
-        width: 90,
+        width: 160,
     },
     {
         field: 'model',
@@ -33,7 +33,7 @@ const columns: GridColDef[] = [
     {
         field: 'description',
         headerName: 'Description',
-        width: 90,
+        width: 200,
     },
     {
         field: 'price',
@@ -92,7 +92,7 @@ export const DataTable = () => {
             />
             {/* when Data Grid is deleted the dashboard is able to load up. not sure what's happening */}
             <Button onClick={handleOpen}>Update</Button>
-            <Button variant="contained" color="secondary" onClick={deleteData}>Delete</Button>
+            <Button variant="contained" color="primary" onClick={deleteData}>Delete</Button>
 
             {/*Dialog Pop Up begin */}
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
